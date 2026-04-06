@@ -1,0 +1,46 @@
+/* hace que sean transparente la parte de atras */
+
+.contenedor {
+  display: flex;      
+  gap: 20px;          
+  justify-content: center; 
+}
+
+.card-frente,
+.card-dorso {
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column; 
+
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background: lightblue;
+} 
+/* hace que la carta ocupe una posición en la pantalla */
+.card {
+  width: 200px;
+  height: 250px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+/* ESTA ES LA CLAVE 🔥 */
+.card.volteada {
+  transform: rotateY(180deg);
+}
+
+/* pone al dorso volteado desde el inicio */
+.card-dorso {
+  transform: rotateY(180deg);
+  position: absolute;
+  text-align: center;
+  right: 0;
+  left: 0;
+  top: 0px;
+
+  display: flex;
+  flex-direction: column;   
+  justify-content: space-between; 
+  align-items: center;
+}
