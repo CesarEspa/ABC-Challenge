@@ -1,11 +1,242 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <title>Edu-k-t | Abecedario Infantil</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <header class="navbar-custom">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <h1 class="m-0">EDU-K-T</h1>
+            <nav>
+                <span class="badge bg-light text-dark fs-5">Letras Vistas: <span id="contaVistas">0</span>/26</span>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container text-center mt-4">
+        <div class="row">
+            <div class="col">
+                <h2>¡Bienvenido a Edu-k-t!</h2>
+                <p>Edu-k-t es una aplicación educativa diseñada para ayudar a los niños a aprender el alfabeto de una manera divertida e interactiva.</p>
+                
+                <div class="my-4">
+                    <button class="btn btn-primary px-4" onclick="filtrar('todas')">Ver Todas</button>
+                    <button class="btn btn-success px-4" onclick="filtrar('vocal')">Solo Vocales</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjetas-grid">
+            <!-- VOCALES -->
+            <div class="card-container" data-tipo="vocal" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>A</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Agucate.png" alt="Aguacate"><h3>Aguacate</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="vocal" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>E</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Elefante.png" alt="Elefante"><h3>Elefante</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="vocal" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>I</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Isla.png" alt="Isla"><h3>Isla</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="vocal" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>O</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Oveja.png" alt="Oveja"><h3>Oveja</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="vocal" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>U</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Uva.png" alt="Uva"><h3>Uva</h3></div>
+                </div>
+            </div>
+
+         
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>B</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Banana.png" alt="Banana"><h3>Banana</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>C</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Casa.png" alt="Casa"><h3>Casa</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>D</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Dado.jgp.png" alt="Dado"><h3>Dado</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>F</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/fuego.png" alt="Fuego"><h3>Fuego</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>G</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/guantes.png" alt="Guantes"><h3>Guantes</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>H</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Hilo.png" alt="Hilo"><h3>Hilo</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>J</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Jarra.png" alt="Jarra"><h3>Jarra</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>K</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Kiwi.png" alt="Kiwi"><h3>Kiwi</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>L</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Limon.png" alt="Limón"><h3>Limón</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>M</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Manzana.png" alt="Manzana"><h3>Manzana</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>N</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Naranja.png" alt="Naranja"><h3>Naranja</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>Ñ</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Niño.png" alt="Niño"><h3>Niño</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>P</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Pulpo.png" alt="Pulpo"><h3>Pulpo</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>Q</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Queso.png" alt="Queso"><h3>Queso</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>R</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Raton.png" alt="Ratón"><h3>Ratón</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>S</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Sandia.png" alt="Sandía"><h3>Sandía</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>T</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Tomate.png" alt="Tomate"><h3>Tomate</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>V</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Vaca.png" alt="Vaca"><h3>Vaca</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>W</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Wokitoki.png" alt="Walkie-talkie"><h3>Walkie-talkie</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>X</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Xilofono.png" alt="Xilófono"><h3>Xilófono</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>Y</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Yuca.png" alt="Yuca"><h3>Yuca</h3></div>
+                </div>
+            </div>
+
+            <div class="card-container" data-tipo="consonante" onclick="voltear(this)">
+                <div class="card-inner">
+                    <div class="card-frente"><h1>Z</h1></div>
+                    <div class="card-dorso"><img src="Imagenes/Zorro.png" alt="Zorro"><h3>Zorro</h3></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <h3>Equipo de Rescate ABCchallenge</h3>
+            <p class="mb-0">Integrantes: Marlon Alvarez, Jessica Acevedo, Cesar España , Angie Beltran  </p>
+            <small>© 2026 Rescate de Sprint de Emergencia</small>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
+
+
