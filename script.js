@@ -37,3 +37,5 @@ function actualizarProgreso() {
 
 // Ejecutamos una vez al cargar para que aparezca 0/26 desde el inicio
 window.onload = actualizarProgreso;
+
+// LOS COMENTARIOS FUERON PUESTO APROPOSITO PARA ENTENDER MAS LA LOGICA
