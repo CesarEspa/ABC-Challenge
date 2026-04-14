@@ -1,4 +1,3 @@
-
 :root {
     --primario: #6bdcff;
     --secundario: #4e5fcd;
@@ -6,29 +5,54 @@
     --oscuro: #2d3436;
 }
 
+/* --- ESTRUCTURA PARA EL FOOTER --- */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #f8f9fa;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.content-wrapper {
+    flex: 1 0 auto; /* Esto empuja al footer hacia abajo */
+}
 
+footer {
+    flex-shrink: 0;
+    background-color: var(--oscuro);
+}
+
+/* --- HEADER Y LOGO --- */
 .navbar-custom {
     background-color: var(--primario);
     color: white;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+.logo-header {
+    height: 50px;
+    width: auto;
+    background: white;
+    padding: 2px;
+    border-radius: 5px;
+}
 
+/* --- GRID DE TARJETAS --- */
 .tarjetas-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 25px;
+    gap: 20px;
     padding: 30px 0;
 }
 
-
+/* --- EFECTO GIRO (FLIP) --- */
 .card-container {
-    height: 260px;
+    height: 250px;
     perspective: 1000px;
     cursor: pointer;
 }
@@ -37,8 +61,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.6s;
     transform-style: preserve-3d;
 }
 
@@ -51,101 +74,41 @@ body {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 20px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
 
 .card-frente {
     background-color: white;
-    border: 4px solid var(--acento);
+    border: 3px solid var(--acento);
 }
 
 .card-frente h1 {
-    font-size: 5.5rem;
-    margin: 0;
+    font-size: 5rem;
     color: var(--primario);
-    font-weight: bold;
+    margin: 0;
 }
-
 
 .card-dorso {
     background-color: var(--secundario);
     color: white;
     transform: rotateY(180deg);
-    padding: 15px;
 }
 
 .card-dorso img {
-    width: 85%;
-    height: 140px;
+    width: 70%;
+    height: 120px;
     object-fit: contain;
     background: white;
-    border-radius: 12px;
-    padding: 8px;
-    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .card-dorso h3 {
-    font-size: 1.4rem;
-    margin: 0;
-    text-transform: capitalize;
+    margin-top: 10px;
+    font-size: 1.2rem;
 }
-
-
-footer {
-    background-color: var(--oscuro);
-    color: white;
-}
-
-
-
-.contenedor {
-  display: flex;      
-  gap: 20px;          
-  justify-content: center; 
-}
-
-.card-frente,
-.card-dorso {
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column; 
-
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  background: lightblue;
-} 
-/* hace que la carta ocupe una posición en la pantalla */
-.card {
-  width: 200px;
-  height: 250px;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-
-.card.volteada {
-  transform: rotateY(180deg);
-}
-
-
-.card-dorso {
-  transform: rotateY(180deg);
-  position: absolute;
-  text-align: center;
-  right: 0;
-  left: 0;
-  top: 0px;
-
-  display: flex;
-  flex-direction: column;   
-  justify-content: space-between; 
-  align-items: center;
-}
-
